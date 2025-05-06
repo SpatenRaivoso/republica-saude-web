@@ -59,10 +59,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-6">Contato</h4>
             <ul className="space-y-3">
               <li className="text-natural-200">
-                <span className="font-medium">Endereço:</span> Av. Paulista, 1000, São Paulo - SP
+                <span className="font-medium">Endereço:</span> R. 89, 655, St. Sul, Goiânia - GO
               </li>
               <li className="text-natural-200">
-                <span className="font-medium">Telefone:</span> (11) 99999-9999
+                <span className="font-medium">Telefone:</span> (62) 99999-9999
               </li>
               <li className="text-natural-200">
                 <span className="font-medium">Email:</span> contato@republicadasaude.com.br

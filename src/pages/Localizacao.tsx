@@ -35,12 +35,12 @@ const LocalizacaoPage = () => {
               </div>
               <div>
                 <h2 className="text-2xl font-bold mb-4">Endereço</h2>
-                <p className="mb-2">Avenida Paulista, 1000</p>
-                <p className="mb-2">Bela Vista, São Paulo - SP</p>
-                <p className="mb-2">CEP: 01310-100</p>
+                <p className="mb-2">R. 89, 655</p>
+                <p className="mb-2">St. Sul, Goiânia - GO</p>
+                <p className="mb-2">CEP: 74093-140</p>
                 <p className="mb-4">Estacionamento com manobrista</p>
                 
-                <p className="font-medium">Próximo ao metrô Trianon-MASP</p>
+                <p className="font-medium">Acesso fácil pelas principais vias da cidade</p>
               </div>
             </div>
           </div>
