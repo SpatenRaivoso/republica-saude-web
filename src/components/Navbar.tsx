@@ -3,6 +3,14 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import ReservationForm from './ReservationForm';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,31 +32,34 @@ const Navbar = () => {
           <NavLink to="/menu" className="text-natural-500 hover:text-natural-600 transition-colors">
             Cardápio
           </NavLink>
-          <NavLink to="/#conceito" className="text-natural-500 hover:text-natural-600 transition-colors">
+          <NavLink to="/conceito" className="text-natural-500 hover:text-natural-600 transition-colors">
             Conceito
           </NavLink>
-          <NavLink to="/#depoimentos" className="text-natural-500 hover:text-natural-600 transition-colors">
+          <NavLink to="/depoimentos" className="text-natural-500 hover:text-natural-600 transition-colors">
             Depoimentos
           </NavLink>
-          <NavLink to="/#localizacao" className="text-natural-500 hover:text-natural-600 transition-colors">
+          <NavLink to="/localizacao" className="text-natural-500 hover:text-natural-600 transition-colors">
             Localização
           </NavLink>
-          <NavLink to="/#contato" className="text-natural-500 hover:text-natural-600 transition-colors">
+          <NavLink to="/contato" className="text-natural-500 hover:text-natural-600 transition-colors">
             Contato
           </NavLink>
         </div>
 
         {/* Contact Button */}
-        <a 
-          href="https://wa.me/5511999999999" 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="hidden lg:block"
-        >
-          <Button className="btn-primary">
-            Faça seu pedido
-          </Button>
-        </a>
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="hidden lg:flex btn-primary">
+              Faça sua reserva
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[500px]">
+            <DialogHeader>
+              <DialogTitle className="text-2xl">Reserva de Mesa</DialogTitle>
+            </DialogHeader>
+            <ReservationForm />
+          </DialogContent>
+        </Dialog>
 
         {/* Mobile menu button */}
         <button 
@@ -78,43 +89,46 @@ const Navbar = () => {
               Cardápio
             </NavLink>
             <NavLink 
-              to="/#conceito" 
+              to="/conceito" 
               className="text-natural-500 hover:text-natural-600 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Conceito
             </NavLink>
             <NavLink 
-              to="/#depoimentos" 
+              to="/depoimentos" 
               className="text-natural-500 hover:text-natural-600 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Depoimentos
             </NavLink>
             <NavLink 
-              to="/#localizacao" 
+              to="/localizacao" 
               className="text-natural-500 hover:text-natural-600 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Localização
             </NavLink>
             <NavLink 
-              to="/#contato" 
+              to="/contato" 
               className="text-natural-500 hover:text-natural-600 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
               Contato
             </NavLink>
-            <a 
-              href="https://wa.me/5511999999999" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="mt-2"
-            >
-              <Button className="btn-primary w-full">
-                Faça seu pedido
-              </Button>
-            </a>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="btn-primary w-full mt-2">
+                  Faça sua reserva
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[500px]">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl">Reserva de Mesa</DialogTitle>
+                </DialogHeader>
+                <ReservationForm />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       )}
