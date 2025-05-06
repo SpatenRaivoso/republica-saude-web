@@ -22,7 +22,7 @@ Você pode escolher entre diferentes formas de desenvolvimento:
 
 1. **Clone o repositório:**
    ```bash
-   git clone <YOUR_GIT_URL>
+   git clone https://github.com/SpatenRaivoso/republica-saude-web.git
    npm install
    npm run dev
 
